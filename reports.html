@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            font-family: "Poppins", sans-serif;
+            color: white;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #0F172A;
+            color: white;
+            height: 10%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 3%;
+            width: 40%;
+            font-weight: 40px;
+        }
+        .subtext {
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; 
+
+        }
+        .subtext li{
+            list-style-type: none;
+            
+        }
+        .subtext li a {
+            text-decoration: none;
+            color: white;
+            
+        }
+        .subtext li a:hover {
+            text-decoration: underline;
+            position: relative;
+            top: -4px;
+        }
+        #active {
+            background-color: white;
+            color: #0F172A;
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 30px;
+        }
+        .space {
+            background-color: white;
+            border: 3px dotted white; 
+        }
+    </style>
+</head>
+<body>
+    <header class = "header" >
+        <ul class = "logo">
+            <img src = "pig.png" alt = "image of water-color pig" width = "60">
+            <h1>Finance Tracker</h1> 
+        </ul>
+        
+        <ul class = "subtext">
+            <li>
+                <a href = "dashboard.html">Dashboard </a>
+            </li>
+            <li>
+                <a href = "planner.html">Planner</a>
+            </li>
+            <li>
+                <a href = "reports.html" id = "active">Reports </a>
+            </li>
+            <li>
+                <a href = "insights.html">Insights </a>
+            </li>
+        </ul>
+    </header>
+    <div class = "space"></div>
+    <main>
+        
+    </main>
+</body>
+</html>

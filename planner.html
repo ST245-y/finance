@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            font-family: "Poppins", sans-serif;
+            color: white;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #0F172A;
+            color: white;
+            height: 14%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 3%;
+            width: 40%;
+            font-weight: 40px
+        }
+        .subtext {
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; 
+
+        }
+        .subtext li{
+            list-style-type: none;
+            
+        }
+        .subtext li a {
+            text-decoration: none;
+            color: white;
+            
+        }
+        .subtext li a:hover {
+            text-decoration: underline;
+            position: relative;
+            top: -4px;
+        }
+        #active {
+            background-color: white;
+            color: #0F172A;
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 30px;
+        }
+        .space {
+            background-color: white;
+            border: 3px dotted white; 
+        }
+        .main h2 {
+            text-align: center;
+            font-family: "Roboto Mono", monospace;
+        }
+        #subtitle {
+            text-align: center;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 22px;
+        }
+        .textbox {
+            background-color: black;
+            border: solid 2px white;
+            color: white;
+        }
+        .categories p{
+            width: 150px;
+        }
+        .categories {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .buttoned {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .buttoned button {
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace; 
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .forms input{
+            background-color: black;
+            color: white;
+            border: solid 2px white;
+        }
+        .response {
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        .income {
+            margin-bottom: 40px;
+        }
+        .forms {
+            width: 500px;
+            justify-content: space-between;
+            margin: auto;
+            padding: 30px;
+            align-content: center;
+            border: solid 3px #334155;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class = "header" >
+        <ul class = "logo">
+            <img src = "pig.png" alt = "image of water-color pig" width = "60">
+            <h1>Finance Tracker</h1> 
+        </ul>
+        
+        <ul class = "subtext">
+            <li>
+                <a href = "dashboard.html">Dashboard </a>
+            </li>
+            <li>
+                <a href = "planner.html" id = "active">Planner</a>
+            </li>
+            <li>
+                <a href = "reports.html">Reports </a>
+            </li>
+            <li>
+                <a href = "insights.html">Insights </a>
+            </li>
+        </ul>
+    </header>
+    <div class = "space"></div>
+    <main class = "main">
+        <h2>Budget Planner</h2>
+        <p id = "subtitle"> Build a personalized monthly budget</p>
+        
+        <form action = "" method = "" class = "forms">
+
+            <div class = "income">
+                <h3>Income:</h3>
+                <div class = "response">
+                    <label for = "monthly-income"> Monthly Income: </label>
+                    <input type = "number" id = "monthly-income" name = "monthly-income" min = "0">
+                </div>
+            </div>
+
+            <h3>Monthly Expenses:</h3>
+            <div class = "response">
+                <label for = "housing"> Housing: </label>
+                <input type = "number" id = "housing" name = "housing" min = "0" required>
+            </div>
+
+            <div class = "response">
+                <label for = "food"> Food: </label>
+                <input type = "number" id = "food" name = "food" min = "0" required>
+            </div>
+
+            <div class = "response">
+                <label for = "transportation"> Transportation: </label>
+                <input type = "number" id = "transportation" name = "transportation" min = "0" required>
+            </div>
+
+            <div class = "response">
+                <label for = "utilities"> Utilities: </label>
+                <input type = "number" id = "utilities" name = "utilities" min = "0" required>
+            </div>
+
+            <div class = "response">
+                <label for = "entertainment"> Entertainment: </label>
+                <input type = "number" id = "entertainment" name = "entertainment" min = "0" required>
+            </div>
+
+            <div class = "response">
+                <label for = "other"> Other: </label>
+                <input type = "number" id = "other" name = "other" min = "0" required>
+            </div>
+
+            <div class = "buttoned">
+                <button type = "submit" id = "button"> Generate Budget </button>
+            </div>
+
+        </form>
+    </main>
+    <script src="planner.js"></script>
+</body>
+</html>
